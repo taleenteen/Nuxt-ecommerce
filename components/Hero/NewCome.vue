@@ -1,15 +1,11 @@
 <template>
-  <div class="my-12 d-flex">
-    <h2 class="mr-12">Flash sale</h2>
-    <div class="d-flex" style="gap: 16px">
-      <v-btn v-for="(item, index) in categories" :key="index">
-        <p>{{ item }}</p>
-      </v-btn>
-    </div>
-    <div class="d-flex ml-auto">
-      <h3>1hr:22m:33s</h3>
-    </div>
+  <div class="d-flex justify-center my-12" style="position: relative">
+    <h2>สินค้าใหม่ประจำเดือน</h2>
+    <v-btn style="right: 0; position: absolute"
+      >ดูทั้งหมด <v-icon> mdi-chevron-right</v-icon></v-btn
+    >
   </div>
+
   <v-carousel
     hide-delimiter-background
     show-arrows="hover"
@@ -38,20 +34,9 @@
       </v-row>
     </v-carousel-item>
   </v-carousel>
-  <div class="d-flex justify-center">
-    <v-btn>ดู Flash Sale ทั้งหมด</v-btn>
-  </div>
 </template>
 
 <script setup>
-const categories = [
-  "ทั้งหมด",
-  "หูฟัง/ลำโพง",
-  "จัดโต๊ะคอม",
-  "คอมพิวเตอร์",
-  "เกมมิ่ง",
-  "เครื่องเสียงมืออาชีพ",
-];
 const productItem = [
   { title: "Computer", picture: "https://via.placeholder.com/150" },
   { title: "TV", picture: "https://via.placeholder.com/150" },

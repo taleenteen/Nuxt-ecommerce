@@ -9,6 +9,12 @@
     <section class="mt-12">
       <HeroFlashSale />
     </section>
+    <section class="mt-12">
+      <HeroPromotion />
+    </section>
+    <section>
+      <HeroNewCome />
+    </section>
   </div>
 </template>
 

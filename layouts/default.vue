@@ -3,12 +3,11 @@
     <v-layout>
       <v-app-bar prominent class="px-4">
         <v-app-bar-nav-icon
-          v-if="title === `gay`"
+          v-if="title === `ok`"
           variant="text"
           @click.stop="drawer = !drawer"
         ></v-app-bar-nav-icon>
-
-        <h1 class="ml-3">TopTier</h1>
+        <NuxtLink to="/"><h1 class="ml-3">TopTier</h1></NuxtLink>
         <v-btn class="ml-3"
           ><v-icon aria-hidden="false"> mdi-apps-box </v-icon>
           <h4 class="ml-2">สินค้าทั้งหมด</h4></v-btn
@@ -33,7 +32,6 @@
             ><v-icon aria-hidden="false"> mdi-cart-outline </v-icon></v-btn
           >
           <ModalLoginModal />
-          <!-- <v-btn rounded="lg" class="button mr-3">เข้าสู่ระบบ</v-btn> -->
         </div>
       </v-app-bar>
 

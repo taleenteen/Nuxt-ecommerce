@@ -14,9 +14,49 @@
       </v-sheet>
     </v-carousel-item>
   </v-carousel>
+  <div class="d-flex justify-space-between pa-4 my-8">
+    <div class="d-flex" v-for="(service, index) in services" :key="index">
+      <div class="mx-4 my-auto">
+        <v-icon aria-hidden="false"> {{ service.icon }} </v-icon>
+      </div>
+      <div>
+        <h4>{{ service.title }}</h4>
+        <p class="text-caption">
+          {{ service.content }}
+        </p>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script lang="ts" setup>
+const services = [
+  {
+    title: "Free Home Delivery",
+    icon: "mdi-truck",
+    content:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae, dignissimos?",
+  },
+  {
+    title: "24/7 Support",
+    icon: "mdi-phone",
+    content:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae, dignissimos?",
+  },
+  {
+    title: "Quick Support",
+    icon: "mdi-truck",
+    content:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae, dignissimos?",
+  },
+  {
+    title: "Secure Payment Way",
+    icon: "mdi-phone",
+    content:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae, dignissimos?",
+  },
+];
+
 const colors = [
   "indigo",
   "warning",
